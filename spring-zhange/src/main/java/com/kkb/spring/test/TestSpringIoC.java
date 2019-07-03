@@ -14,9 +14,9 @@ public class TestSpringIoC {
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		//根据Bean的类型，从容器中获取实例
 		UserService service1 = context.getBean(UserService.class);
-		UserService service2 = (UserService) context.getBean("userService");
+		//UserService service2 = (UserService) context.getBean("userServiceImpl");
 		
 		service1.saveUser();
-		service2.saveUser();
+		//service2.saveUser();
 	}
 }
